@@ -10,7 +10,7 @@
 
  header {
 
- background: #ecf000; /* Sets dark blue background for header */
+ background: #fcff56; /* Sets light yellow background for header */
 
  color: rgba(255, 58, 58, 0.952); /* Sets header text color to white */
 
@@ -98,8 +98,48 @@
 
  background: #003366; /* Sets footer background color */
 
- color: white; /* Sets footer text color */
+ color: rgb(255, 255, 255); /* Sets footer text color */
 
  margin-top: 20px; /* Adds spacing above footer */
 
  }
+
+ 
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf4;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition:.5s;
+    
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
