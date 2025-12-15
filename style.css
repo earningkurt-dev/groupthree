@@ -10,15 +10,29 @@
 
  header {
 
- background: #ecf000; /* Sets dark blue background for header */
+ background: #fcff56; /* Sets light yellow background for header */
 
  color: rgba(255, 58, 58, 0.952); /* Sets header text color to white */
 
  padding: 20px; /* Adds space inside the header */
 
+position: relative; /* Establishes a positioning context for the logo */
 
+    height: 100px; /* Define a height for your header area */
+
+    border-bottom: 1px solid #ccc; /* Optional: adds a border for visibility */
+
+        line-height: 100px; /* Vertically centers the text if container height is set */
+
+    height: 100%; /* Ensures the div takes the full height of the container */
+
+    margin: 0; /* Remove default margins */
 
  }
+
+ h1 {
+    margin: 0; /* Remove default margin for the h1 tag */
+}
 
  nav {
 
@@ -98,14 +112,56 @@
 
  background: #003366; /* Sets footer background color */
 
- color: white; /* Sets footer text color */
+ color: rgb(255, 255, 255); /* Sets footer text color */
 
  margin-top: 20px; /* Adds spacing above footer */
 
  }
 
- img {
-  margin: auto;
-  width: 50%;
-  image-rendering: left;
+.logo {
+    position: absolute; /* Positions the logo relative to the container */
+    top: 10px; /* Adjust as needed for spacing from the top edge */
+    left: 10px; /* Adjust as needed for spacing from the left edge */
+    width: 120px; /* Adjust the logo size as needed */
+    height: auto;
+}
+
+ 
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf4;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition:.5s;
+    
+}
+
+.home-sci a:hover::before{
+    width: 100%;
 }
